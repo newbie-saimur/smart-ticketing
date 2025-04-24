@@ -55,9 +55,10 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <button
-                        class="btn text-[1.2rem] font-bold text-[#1DD100] border border-[rgba(29,209,0,0.40)] bg-[rgba(29,209,0,0.10)] rounded-xl py-5 px-7">Bus<img
-                            src="images/bus-icon.png"></button>
+                    <a href="#purchase-ticket">
+                        <button
+                            class="btn text-[1.2rem] font-bold text-[#1DD100] border border-[rgba(29,209,0,0.40)] bg-[rgba(29,209,0,0.10)] rounded-xl py-5 px-7">Bus<img
+                                src="images/bus-icon.png"></button></a>
                 </div>
             </div>
         </nav>
@@ -180,63 +181,89 @@
             </div>
         </section>
         <!-- Car Details Section -->
-        <section class="hidden bg-[#F7F8F8] rounded-t-[5.5rem] border-t-2 border-[#1DD100]">
+        <section id="purchase-ticket" class="bg-[#F7F8F8] rounded-t-[2.5rem] border-t-2 border-[#1DD100]">
             <!-- Ticket Booking Container -->
-            <div class="w-full max-w-[1170px] mx-auto mt-14 md:mt-6 lg:mt-10 mb-28">
-                <h2>P.H Paribahan</h2>
-                <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing
+            <div class="w-full max-w-[1170px] mx-auto mt-14 md:mt-6 lg:mt-10">
+                <h2 class="text-4xl font-bold text-[#030712] text-center mb-6">P.H Paribahan</h2>
+                <p
+                    class="w-9/10 font-inter text-base md:text-lg font-normal leading-[1.875rem] text-[rgba(3,7,18,0.60)] text-center md:w-full md:max-w-[46rem] mx-auto mb-12">
+                    Yes, you can run unit tests and view the results directly within the app. The integrated testing
                     features allow for a streamlined.</p>
-                <!-- Car Information -->
-                <div>
-                    <div>
-                        <!-- Green Paribahan -->
-                        <div>
-                            <div>
-                                <div><img src="images/bus-logo.png" alt=""></div>
-                                <div>
-                                    <h3>Greenline Paribahan</h3>
-                                    <p>Coach-009-WEB ! AC_Business</p>
+                <!-- Purchase Ticket Container -->
+                <div class="flex flex-col gap-7">
+                    <!-- Car Information Section-->
+                    <div
+                        class="flex flex-col lg:flex-row bg-white rounded-3xl p-4 md:p-8 justify-between items-center gap-8 lg:h-[26.125rem]">
+                        <!-- Bus Info -->
+                        <div class="w-full max-w-[50.5rem]">
+                            <!-- Green Paribahan -->
+                            <div class="flex gap-6 md:gap-0 flex-col md:flex-row justify-between items-center mb-4">
+                                <div class="flex gap-4 items-center">
+                                    <div><img class="hidden md:flex w-[4.3rem]" src="images/bus-logo.png" alt=""></div>
+                                    <div class="text-center md:text-left">
+                                        <h3 class="text-2xl md:text-[2rem] text-[#030712] font-bold">Greenline Paribahan
+                                        </h3>
+                                        <p class="font-inter text-sm md:text-lg font-normal text-[rgba(3,7,18,0.60)]">
+                                            Coach-009-WEB
+                                            ! AC_Business</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-centert">
+                                    <button
+                                        class="flex items-center gap-2 border-none rounded-xl bg-[rgba(29,209,0,0.15)] font-inter text-[#1DD100] text-base md:text-lg font-medium md:py-[0.87rem] py-3 px-8 md:px-[1.06rem]"><img
+                                            class="w-5 h-5 md:w-7 md:h-7" src="images/seat-green.png"
+                                            alt=""><span>40</span> Seats
+                                        Left</button>
                                 </div>
                             </div>
-                            <div>
-                                <button class="btn"><img src="images/seat-green.png" alt="">40 Seats Left</button>
+                            <!-- route -->
+                            <div class="bg-[#F7F8F8] rounded-2xl md:rounded-3xl p-4 md:p-8">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-lg font-semibold text-[rgba(3,7,18,0.60)]">Route</p>
+                                    <p class="text-lg font-semibold text-[#030712]">Dhaka - Sylhet</p>
+                                </div>
+                                <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)] my-6">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-lg font-semibold text-[rgba(3,7,18,0.60)]">Departure Time</p>
+                                    <p class="text-lg font-semibold text-[#030712]">9:00 PM</p>
+                                </div>
+                                <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)] my-6">
+                                <div class="font-inter flex justify-between gap-1 md:gap-0">
+                                    <button
+                                        class="bg-[rgba(3,7,18,0.05)] rounded-xl px-4 py-3 text-[rgba(3,7,18,0.80)] text-xs md:text-[0.952rem] xl:px-6 xl:text-lg">Boarding
+                                        Point - Laxmipur</button>
+                                    <button
+                                        class="bg-[rgba(3,7,18,0.05)] rounded-xl px-4 py-3 text-[rgba(3,7,18,0.80)] text-xs md:text-[0.952rem] xl:px-6 xl:text-lg">Dropping
+                                        Point - Bogura</button>
+                                    <button
+                                        class="bg-[rgba(3,7,18,0.05)] rounded-xl px-4 py-3 text-[rgba(3,7,18,0.80)] text-xs md:text-[0.952rem] xl:px-6 xl:text-lg">Est.
+                                        Time - 11 Hour</button>
+                                </div>
+                            </div>
+                            <div
+                                class="font-inter w-full flex lg:hidden gap-4 justify-center items-center pt-4 md:pt-8">
+                                <img class="w-8 h-8" src="images/fare.png" alt="">
+                                <h3 class="text-2xl text-[#030712] font-bold">550 Taka</h3>
+                                <p class="text-xl font-semibold text-[rgba(3,7,18,0.60)]">Per Seat</p>
                             </div>
                         </div>
-                        <!-- route -->
-                        <div>
+                        <!-- Ticket Price -->
+                        <div class="hidden lg:flex items-center w-full max-w-[16.625rem]">
                             <div>
-                                <p>Route</p>
-                                <p>Dhaka - Sylhet</p>
+                                <img class="h-[26.125rem]" src="images/info-devider.png" alt="">
                             </div>
-                            <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)]">
-                            <div>
-                                <p>Departure Time</p>
-                                <p>9:00 PM</p>
-                            </div>
-                            <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)]">
-                            <div>
-                                <button class="btn">Boarding Point - Laxmipur</button>
-                                <button class="btn">Dropping Point - Bogura</button>
-                                <button class="btn">Est. Time - 11 Hour</button>
+                            <div class="w-full flex flex-col justify-center items-center">
+                                <img class="w-12 h-12" src="images/fare.png" alt="">
+                                <h3 class="font-inter text-[2rem] text-[#030712] font-bold leading-10">550 Taka</h3>
+                                <p class="text-2xl font-semibold leading-10 text-[rgba(3,7,18,0.60)]">Per Seat</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Coupon Price -->
+                    <!-- Select Seat -->
                     <div>
-                        <div>
-                            <img src="images/info-devider.png" alt="">
-                        </div>
-                        <div>
-                            <img src="images/fare.png" alt="">
-                            <h3>550 Taka</h3>
-                            <p>Per Seat</p>
-                        </div>
+                        <div></div>
+                        <div></div>
                     </div>
-                </div>
-                <!-- Select Seat -->
-                <div>
-                    <div></div>
-                    <div></div>
                 </div>
             </div>
         </section>
@@ -247,8 +274,12 @@
             <div class="px-0 md:px-4 xl:px-0">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                     <div>
-                        <h2 class="text-3xl lg:text-[2.25rem] font-extrabold text-center md:text-left mb-4">P-Ticket</h2>
-                        <p class="w-full max-w-[23.375rem] text-base lg:text-lg text-center md:text-left font-normal leading-[1.875rem] font-inter text-[rgba(255,255,255,0.80)]">P-Ticket is a digital platform to make your daily commuting better.</p></div>
+                        <h2 class="text-3xl lg:text-[2.25rem] font-extrabold text-center md:text-left mb-4">P-Ticket
+                        </h2>
+                        <p
+                            class="w-9/10 mx-auto md:w-full max-w-[23.375rem] text-base lg:text-lg text-center md:text-left font-normal leading-[1.875rem] font-inter text-[rgba(255,255,255,0.80)]">
+                            P-Ticket is a digital platform to make your daily commuting better.</p>
+                    </div>
                     <div class="flex flex-col justify-center items-center">
                         <p class="text-lg lg:text-xl font-semibold mb-3 lg:mb-5">Download our app</p>
                         <img class="w-8/10 lg:w-full" src="images/playstore.png" alt="">
@@ -256,8 +287,10 @@
                 </div>
                 <hr class="border-t border-dashed border-[rgba(255,255,255,0.30)] mt-12 mb-8">
                 <div class="flex flex-col-reverse gap-8 md:gap-0 md:flex-row justify-between items-center font-inter">
-                    <p class="text-sm lg:text-base font-normal text-[rgba(255,255,255,0.70)] text-center md:text-left">@all rights reserved, P-Ticket services limited.2024</p>
-                    <ul class="flex flex-col md:flex-row items-center justify-between text-sm lg:text-base font-medium gap-4 md:gap-8">
+                    <p class="text-sm lg:text-base font-normal text-[rgba(255,255,255,0.70)] text-center md:text-left">
+                        @all rights reserved, P-Ticket services limited.2024</p>
+                    <ul
+                        class="flex flex-col md:flex-row items-center justify-between text-sm lg:text-base font-medium gap-4 md:gap-8">
                         <li><a href="#">Terms & condition</a></li>
                         <li><a href="#">Return & refund policy</a></li>
                         <li><a href="#">Privacy policy</a></li>
