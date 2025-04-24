@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P-Ticket</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .font-raleway {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .font-inter {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="font-raleway">
+    <header class="w-full max-w-[1170px] mx-auto">
+        <nav class="my-6">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost px-1 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Destination</a></li>
+                            <li><a href="#">Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-[#030712] px-1 text-3xl md:text-[2.25rem] font-extrabold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="flex px-1 text-[rgba(3,7,18,0.70)] text-lg font-medium gap-14">
+                        <li><a class="hover:text-[#1DD100] transition-all duration-300" href="#">Home</a></li>
+                        <li><a class="hover:text-[#1DD100] transition-all duration-300" href="#">About</a></li>
+                        <li><a class="hover:text-[#1DD100] transition-all duration-300" href="#">Destination</a></li>
+                        <li><a class="hover:text-[#1DD100] transition-all duration-300" href="#">Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <button
+                        class="btn text-[1.2rem] font-bold text-[#1DD100] border border-[rgba(29,209,0,0.40)] bg-[rgba(29,209,0,0.10)] rounded-xl py-5 px-7">Bus<img
+                            src="images/bus-icon.png"></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
