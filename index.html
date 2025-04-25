@@ -20,6 +20,25 @@
         .font-inter {
             font-family: "Inter", sans-serif;
         }
+
+        .seat-arrangement button {
+            padding: 1.06rem 2.75rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: rgba(3, 7, 18, 0.50);
+            background-color: #F7F8F8;
+            border-radius: 0.75rem;
+            border: none;
+            width: 110px;
+        }
+
+        .seat-arrangement button:first-child {
+            padding: 0.905rem 2.39rem;
+        }
+        
+        .seat-arrangement p {
+            width: 14px;
+        }
     </style>
 </head>
 
@@ -79,8 +98,8 @@
                             Yes, you can run unit tests and view the results directly within the app. The integrated
                             testing features allow for a streamlined.</p>
                         <a href="#purchase-ticket"><button
-                            class="text-lg font-bold text-white bg-[#1DD100] rounded-xl py-4 border-[#1DD100] hover:bg-[rgba(29,209,0,0.7)] px-8">Buy
-                            Tickets</button></a>
+                                class="cursor-pointer text-lg font-bold text-white bg-[#1DD100] rounded-xl py-4 border-[#1DD100] hover:bg-[rgba(29,209,0,0.9)] px-8">Buy
+                                Tickets</button></a>
                     </div>
                 </div>
             </div>
@@ -176,7 +195,7 @@
             </div>
             <div class="flex justify-center mt-6 md:mt-8 lg:mt-12">
                 <button
-                    class="text-base lg:text-xl font-bold bg-transparent border border-[#1DD100] rounded-xl px-6 py-[10px] lg:px-8 lg:py-4 text-[#1DD100]">See
+                    class="cursor-pointer text-base lg:text-xl font-bold bg-transparent border border-[#1DD100] rounded-xl px-6 py-[10px] lg:px-8 lg:py-4 text-[#1DD100]">See
                     All Offers</button>
             </div>
         </section>
@@ -260,9 +279,244 @@
                         </div>
                     </div>
                     <!-- Select Seat -->
-                    <div>
-                        <div></div>
-                        <div></div>
+                    <div class="flex mb-16 rounded-3xl bg-white font-inter">
+                        <!-- Seat Arrangement and Booking -->
+                        <div class="w-[42.06rem] p-8">
+                            <h4 class="text-2xl font-raleway font-semibold text-[#030712]">Select Your Seat</h4>
+                            <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)] my-6">
+                            <div class="flex justify-between">
+                                <div>
+                                    <button
+                                        class="flex items-center gap-2 border-none rounded-xl text-[rgba(3,7,18,0.50)] text-base md:text-lg font-medium"><img
+                                            class="w-5 h-5 md:w-7 md:h-7" src="images/seat-gray.png"
+                                            alt="">Available</button>
+                                </div>
+                                <div>
+                                    <button
+                                        class="flex items-center gap-2 border-none rounded-xl text-[rgba(3,7,18,0.50)] text-base md:text-lg font-medium"><img
+                                            class="w-5 h-5 md:w-7 md:h-7" src="images/seat-green-filled.png"
+                                            alt="">Selected</button>
+                                </div>
+                            </div>
+                            <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)] my-6">
+                            <!-- Seat Arrangement Start-->
+                            <div class="flex flex-col seat-arrangement gap-6">
+                                <div class="flex justify-end">
+                                    <button class="py-2 px-[2.4rem]"><img src="images/drive-icon.png" alt=""></button>
+                                </div>
+                                <!-- Row A -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>A</p>
+                                        <div class="flex gap-8">
+                                            <button>A1</button>
+                                            <button>A2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>A3</button>
+                                        <button>A4</button>
+                                    </div>
+                                </div>
+                                <!-- Row B -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>B</p>
+                                        <div class="flex gap-8">
+                                            <button>B1</button>
+                                            <button>B2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>B3</button>
+                                        <button>B4</button>
+                                    </div>
+                                </div>
+                                <!-- Row C -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>C</p>
+                                        <div class="flex gap-8">
+                                            <button>C1</button>
+                                            <button>C2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>C3</button>
+                                        <button>C4</button>
+                                    </div>
+                                </div>
+                                <!-- Row D -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>D</p>
+                                        <div class="flex gap-8">
+                                            <button>D1</button>
+                                            <button>D2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>D3</button>
+                                        <button>D4</button>
+                                    </div>
+                                </div>
+                                <!-- Row E -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>E</p>
+                                        <div class="flex gap-8">
+                                            <button>E1</button>
+                                            <button>E2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>E3</button>
+                                        <button>E4</button>
+                                    </div>
+                                </div>
+                                <!-- Row F -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>F</p>
+                                        <div class="flex gap-8">
+                                            <button>F1</button>
+                                            <button>F2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>F3</button>
+                                        <button>F4</button>
+                                    </div>
+                                </div>
+                                <!-- Row G -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>G</p>
+                                        <div class="flex gap-8">
+                                            <button>G1</button>
+                                            <button>G2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>G3</button>
+                                        <button>G4</button>
+                                    </div>
+                                </div>
+                                <!-- Row H -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>H</p>
+                                        <div class="flex gap-8">
+                                            <button>H1</button>
+                                            <button>H2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>H3</button>
+                                        <button>H4</button>
+                                    </div>
+                                </div>
+                                <!-- Row I -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>I</p>
+                                        <div class="flex gap-8">
+                                            <button>I1</button>
+                                            <button>I2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>I3</button>
+                                        <button>I4</button>
+                                    </div>
+                                </div>
+                                <!-- Row J -->
+                                <div class="flex justify-between">
+                                    <div class="flex justify-start items-center gap-6">
+                                        <p>J</p>
+                                        <div class="flex gap-8">
+                                            <button>J1</button>
+                                            <button>J2</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-8">
+                                        <button>J3</button>
+                                        <button>J4</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Seat Arrangement End-->
+                        </div>
+                        <!-- Seperator Line -->
+                        <div class="w-px h-[66rem] border-l-[0.125rem] border-dashed border-[rgba(3,7,18,0.30)] my-8">
+                        </div>
+                        <!-- Selected Seat Summary and Passenger Details -->
+                        <div class="w-[31.06rem] p-8">
+                            <h4 class="font-raleway text-2xl font-semibold text-[#030712]">Selected Seat Information
+                            </h4>
+                            <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)] my-6">
+                            <!-- Selected Seat summary -->
+                            <div class="flex flex-col gap-4 bg-[#F7F8F8] rounded-xl p-8 mb-6">
+                                <div class="flex justify-between">
+                                    <p class="w-3/8 text-base text-[#030712] font-medium">Seat <span
+                                            class="text-xs font-semibold text-white bg-[#1DD100] px-[6px] rounded-sm">1</span>
+                                    </p>
+                                    <p class="w-3/8 text-base text-[#030712] font-medium">Class</p>
+                                    <p class="w-2/8 text-base text-[#030712] font-medium text-right">Price</p>
+                                </div>
+                                <hr class="border-t border-dashed border-[rgba(3,7,18,0.20)]">
+                                <div>
+                                    <div class="flex justify-between">
+                                        <p class="w-3/8 text-base font-normal text-[rgba(3,7,18,0.60)]">C2</p>
+                                        <p class="w-3/8 text-base font-normal text-[rgba(3,7,18,0.60)]">Economy</p>
+                                        <p class="w-2/8 text-base font-normal text-[rgba(3,7,18,0.60)] text-right">550
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr class="border-t border-[rgba(3,7,18,0.20)]">
+                                <div class="flex justify-between">
+                                    <p class="text-base text-[#030712] font-medium">Total Price</p>
+                                    <p class="text-base text-[#030712] font-medium">BDT <span>550</span></p>
+                                </div>
+                                <div class="mb-2 relative">
+                                    <input
+                                        class="text-sm font-normal bg-white rounded-xl border-none p-5 w-full text-[rgba(3,7,18,0.40)]"
+                                        type="text" name="" id="" placeholder="Have any coupon?">
+                                    <button
+                                        class="cursor-pointer absolute right-2 bottom-2 text-base font-semibold bg-[#1DD100] rounded-lg py-[0.65rem] px-[1.1rem] text-white">Apply</button>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p class="text-base text-[#030712] font-medium">Grand Total</p>
+                                    <p class="text-base text-[#030712] font-medium">BDT <span>550</span></p>
+                                </div>
+                            </div>
+                            <!-- Passenger Information -->
+                            <div>
+                                <form class="flex flex-col gap-4" action="">
+                                    <label class="text-base font-semibold text-[#030712]" for="">Passenger Name*</label>
+                                    <input
+                                        class="mb-2 text-base font-normal py-[1.4rem] px-6 rounded-xl border-[rgba(3,7,18,0.10)] text-[rgba(3,7,18,0.40)]"
+                                        type="text" name="" id="" placeholder="Enter your name">
+                                    <label class="text-base font-semibold text-[#030712]" for="">Phone Number*</label>
+                                    <input
+                                        class="mb-2 text-base font-normal py-[1.4rem] px-6 rounded-xl border-[rgba(3,7,18,0.10)] text-[rgba(3,7,18,0.40)]"
+                                        type="text" name="" id="" placeholder="Enter your phone number">
+                                    <label class="text-base font-semibold text-[#030712]" for="">Email ID</label>
+                                    <input
+                                        class="mb-2 text-base font-normal py-[1.4rem] px-6 rounded-xl border-[rgba(3,7,18,0.10)] text-[rgba(3,7,18,0.40)]"
+                                        type="text" name="" id="" placeholder="Enter your email id">
+                                    <button
+                                        class="rounded-xl bg-[#1DD100] text-xl font-extrabold text-white font-raleway mb-2 py-4 px-[1.88rem]"
+                                        type="submit">Confirm</button>
+                                    <div class="flex justify-evenly">
+                                        <a class="underline underline-offset-4 text-base font-normal text-[rgba(3,7,18,0.60)]"
+                                            href="#">Terms and Conditions</a>
+                                        <a class="underline underline-offset-4 text-base font-normal text-[rgba(3,7,18,0.60)]"
+                                            href="#">Cancellation Policy</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
