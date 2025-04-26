@@ -449,7 +449,8 @@
                                 <div>
                                     <div id="discount-price-field" class="hidden justify-between">
                                         <p class="text-base text-[#030712] font-medium">Discount</p>
-                                        <p class="text-base text-[#030712] font-medium">BDT <span id="discount-price">0</span>
+                                        <p class="text-base text-[#030712] font-medium">BDT <span
+                                                id="discount-price">0</span>
                                         </p>
                                     </div>
                                     <div id="coupon-input-field" class="relative">
@@ -498,8 +499,7 @@
             </div>
         </section>
         <!-- Ticket Purchase Confirmation -->
-        <section id="confirmation-popup"
-            class="hidden min-h-screen items-center rounded-xl bg-[#F2F1F1] px-2 md:px-0 w-full max-w-[1170px] mx-auto">
+        <section id="confirmation-popup" class="popup-overlay">
             <div
                 class="flex flex-col justify-center rounded-lg items-center w-full max-w-[44.875rem] mx-auto bg-white shadow-sm px-4 md:px-[4.5rem] py-10 md:py-16 font-roboto">
                 <figure class="mb-4 md:mb-8 flex justify-center items-center w-full">
@@ -508,13 +508,16 @@
                 </figure>
                 <div class="text-center">
                     <h2 class="text-2xl font-bold text-[#27AE60] mb-4 md:mb-7">Purchase Success</h2>
-                    <p class="text-base md:text-xl font-medium text-[#4A4A4A]">Thank you for Booking Our Bus Seats.</p>
-                    <p class="text-base md:text-xl font-medium text-[#4A4A4A] mb-3">We are working hard to find the best
+                    <p class="text-base md:text-xl font-medium text-[#4A4A4A]">Thank you for Booking Our Bus Seats.
+                    </p>
+                    <p class="text-base md:text-xl font-medium text-[#4A4A4A] mb-3">We are working hard to find the
+                        best
                         service and deals for you.</p>
-                    <p class="text-base md:text-xl font-light text-[#4A4A4A] mb-5">Shortly you will find a confirmation
+                    <p class="text-base md:text-xl font-light text-[#4A4A4A] mb-5">Shortly you will find a
+                        confirmation
                         in your email.</p>
                     <div class="flex justify-center items-center">
-                        <button
+                        <button id="close-popup"
                             class="text-base md:text-xl font-medium md:font-semibold bg-[#1DD100] text-white py-2 md:py-3 px-16 md:px-20 rounded-full">Continue</button>
                     </div>
                 </div>

@@ -69,6 +69,8 @@ document.getElementById('coupon-apply').addEventListener('click', function () {
     }
 });
 
+const popup = document.getElementById('confirmation-popup');
+
 document.getElementById('confirm-purchase').addEventListener('click', function(){
     const name = document.getElementById('name');
     const phone = document.getElementById('phone');
@@ -90,4 +92,14 @@ document.getElementById('confirm-purchase').addEventListener('click', function()
     }
 
     document.getElementById('form').reset();
+    // Showing popup
+    popup.style.display = 'flex';
+});
+
+document.getElementById('close-popup').addEventListener('click', function(){
+    popup.style.display = 'none';
+});
+
+popup.addEventListener('click', function(event){
+    if(event.target === popup) popup.style.display = 'none';
 });
