@@ -1,9 +1,11 @@
 let buttons = document.querySelectorAll('.seat-toggle-btn');
 let count = 0;
+let purchased = false;
 
 buttons.forEach(button => {
     button.addEventListener('click', function () {
         let flag = true;
+        if(purchased) return;
         if (this.classList.contains('toggle-btn')) {
             count -= 1;
             if (document.getElementById('coupon-input-field').classList.contains('hidden')) restoreCouponDiscount();
@@ -58,20 +60,22 @@ document.getElementById('coupon-apply').addEventListener('click', function () {
     const couponCode = document.getElementById('coupon-field').value;
     console.log(couponCode);
     if (couponCode == 'NEW15' || couponCode == 'Couple20') {
-        document.getElementById('coupon-input-field').classList.add('hidden');
-        document.getElementById('discount-price-field').classList.replace('hidden', 'flex');
         let discount = 0;
         if (couponCode == 'NEW15') discount = Math.round((count * 550) * 0.15);
-        else discount = Math.round((count * 550) * 0.2);
-        document.getElementById('discount-price').innerText = discount;
-        document.getElementById('grand-total-price').innerText -= discount;
-        document.getElementById('coupon-field').value = '';
+        else if (count >= 2) discount = Math.round((count * 550) * 0.2);
+        if (discount) {
+            document.getElementById('coupon-input-field').classList.add('hidden');
+            document.getElementById('discount-price-field').classList.replace('hidden', 'flex');
+            document.getElementById('discount-price').innerText = discount;
+            document.getElementById('grand-total-price').innerText -= discount;
+            document.getElementById('coupon-field').value = '';
+        }
     }
 });
 
 const popup = document.getElementById('confirmation-popup');
 
-document.getElementById('confirm-purchase').addEventListener('click', function(){
+document.getElementById('confirm-purchase').addEventListener('click', function () {
     const name = document.getElementById('name');
     const phone = document.getElementById('phone');
     const email = document.getElementById('email');
@@ -92,14 +96,15 @@ document.getElementById('confirm-purchase').addEventListener('click', function()
     }
 
     document.getElementById('form').reset();
+    purchased = true;
     // Showing popup
     popup.style.display = 'flex';
 });
 
-document.getElementById('close-popup').addEventListener('click', function(){
+document.getElementById('close-popup').addEventListener('click', function () {
     popup.style.display = 'none';
 });
 
-popup.addEventListener('click', function(event){
-    if(event.target === popup) popup.style.display = 'none';
+popup.addEventListener('click', function (event) {
+    if (event.target === popup) popup.style.display = 'none';
 });
